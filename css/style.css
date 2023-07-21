@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FDA12B;
-    --secondary: #8D9297;
-    --light: #F8F9FA;
-    --dark: #182333;
+    --primary:#a4cad1;
+    --secondary:  #838383;
+    --light: #A4CAD1;
+    --dark: #3F484A;
 }
 
 .back-to-top {
@@ -227,7 +227,7 @@
 
 /*** Footer ***/
 .footer {
-    color: #999999;
+    color: white;
 }
 
 .footer .btn.btn-link {
@@ -235,7 +235,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #999999;
+    color: white;
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
@@ -246,7 +246,7 @@
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #999999;
+    color: white;
     margin-right: 10px;
 }
 
@@ -268,4 +268,30 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+/* Overriding Bootstrap Minified Styles */
+
+.bg-primary {
+    background-color:var(--primary) !important;
+}
+
+.text-primary {
+    color:  #C8E0E5 !important;
+}
+
+.carousel-caption .breadcrumb-item+.breadcrumb-item::before {
+    color: #C8E0E5;
+}
+
+.bg-dark {
+    background-color: #3F484A !important;
+}
+
+
+/* Button Background */
+
+.btn-primary {
+    background-color: #173C42 ;
+    border-color: #173C42 ;
 }
