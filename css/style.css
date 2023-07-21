@@ -270,7 +270,9 @@
     color: var(--primary);
 }
 
-/* Overriding Bootstrap Minified Styles */
+/*---------------------------------------------------------------------- */
+/*---------------- Overriding Bootstrap Minified Styles ---------------- */
+/*---------------------------------------------------------------------- */
 
 .bg-primary {
     background-color:var(--primary) !important;
@@ -285,13 +287,35 @@
 }
 
 .bg-dark {
-    background-color: #3F484A !important;
+    background-color: #173C42 !important;
 }
 
+/* Border on H1-H6 */
+.border-primary {
+    border-color: #BDE3EA !important;
+}
+
+/* Text */
+.container a {
+    color: var(--dark);
+}
+
+.container p {
+    color: var(--dark);
+}
 
 /* Button Background */
-
 .btn-primary {
     background-color: #173C42 ;
     border-color: #173C42 ;
+}
+
+.btn-primary:hover {
+    background-color: #BDE3EA;
+    border-color: #173C42 ;
+}
+
+/* Footer  */
+.container-fluid.footer p {
+    color: #ffffff;
 }
