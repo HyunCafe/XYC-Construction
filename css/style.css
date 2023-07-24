@@ -316,9 +316,30 @@
 }
 
 /* Gallery Carousel */
+.gallery-container {
+    position: relative;
+    width: 100%;  /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+  }
 
-
-
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .gallery-item {
+    flex: 0 0 auto;
+    width: 20%;  /* Adjust as needed */
+    scroll-snap-align: center;
+  }
+  
+  /* Optional: Smooth scrolling */
+  .gallery {
+    scroll-behavior: smooth;
+  }
+  
+  
 /* Footer  */
 .container-fluid.footer p {
     color: #ffffff;

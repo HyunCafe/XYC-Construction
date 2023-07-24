@@ -24,22 +24,18 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
-
-    
+  
 })(jQuery);
 
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      center: true,
+      items:5,
+      loop:true,
+      margin:10,
+      autoplay:true,
+      autoplayTimeout:2000, //3 seconds
+      autoplayHoverPause:true
+    });
+  });
+  
