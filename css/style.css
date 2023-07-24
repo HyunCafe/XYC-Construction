@@ -315,7 +315,40 @@
     border-color: #173C42 ;
 }
 
+/* Gallery Carousel */
+.swiper-slide.slide {
+    border-top: 1px solid #000; /* This adds a border to the top of your image */
+    border-bottom: 1px solid #000; /* This adds a border to the bottom of your image */
+    overflow: hidden; /* This makes sure that the overlay does not extend outside the border */
+    position: relative; /* This is necessary to position the overlay correctly */
+}
+
+.swiper-slide.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This scales the image to maintain its aspect ratio while filling the slide's entire content box */
+    object-position: center; /* This centers the image within the slide */
+}
+
+.swiper-slide.slide::before {
+    content: ""; /* This is necessary for the overlay to show */
+    display: block; /* This makes the overlay a block element, which is necessary to position it correctly */
+    position: absolute; /* This positions the overlay */
+    top: 0; /* This positions the overlay */
+    left: 0; /* This positions the overlay */
+    height: 100%; /* This makes the overlay fill the entire slide */
+    width: 100%; /* This makes the overlay fill the entire slide */
+    background-color: rgba(0, 0, 0, 0.5); /* This makes the overlay dark */
+    transition: background-color 0.3s; /* This makes the overlay fade out smoothly when hovered over */
+}
+
+.swiper-slide.slide:hover::before {
+    background-color: rgba(0, 0, 0, 0); /* This makes the overlay disappear when hovered over */
+}
+
+
 /* Footer  */
 .container-fluid.footer p {
     color: #ffffff;
 }
+

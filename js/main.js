@@ -43,3 +43,24 @@
     
 })(jQuery);
 
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,  
+    spaceBetween: 1,  
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    virtual: {
+        slides: (function () {
+            var slides = [];
+            for (var i = 1; i <= 100; i += 1) {
+                slides.push('<div class="swiper-slide slide"><img src="img/fact-' + i + '.jpg" alt="" /></div>');
+            }
+            return slides;
+        }()),
+    },
+});
