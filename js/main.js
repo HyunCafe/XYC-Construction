@@ -45,7 +45,7 @@ $(document).ready(function () {
     },
   });
 
-  for (var i = 1; i <= 12; i++) {
+  for (var i = 1; i <= 11; i++) {
     // Change 12 to the number of images you have
     owl
       .trigger("add.owl.carousel", [

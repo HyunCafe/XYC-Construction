@@ -331,3 +331,7 @@
     color: #ffffff;
 }
 
+body > div.container-fluid.bg-dark.footer.mt-5.pt-5.wow.fadeIn > div.container.py-5 > div {
+    justify-content: center; 
+  }
+  
