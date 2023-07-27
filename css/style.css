@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary:#a4cad1;
+    --primary:#BDE4EB;
     --secondary:  #838383;
     --light: #A4CAD1;
     --dark: #3F484A;
@@ -298,12 +298,12 @@
 
 /* Button Background */
 .btn-primary {
-    background-color: #AFD5DC ;
+    background-color: #6babb6 ;
     border-color: #173C42 ;
 }
 
 .btn-primary:hover {
-    background-color: #005C84;
+    background-color: #aee1e1;
     border-color: #173C42 ;
 }
 
@@ -325,6 +325,10 @@
     object-fit: cover;
   }
   
+  /* Appointments */
+  .bg-form {
+    background-color: rgba(29, 76, 83, 0.8) !important;
+}
 
 /* Footer  */
 .container-fluid.footer p {
