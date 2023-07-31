@@ -300,6 +300,12 @@
   border-color: #173c42;
 }
 
+/* Logo */
+.logo-icon {
+    width: 74px;
+    height: 74px;
+  }
+  
 /* Carousel Cover */
 .carousel-inner .carousel-item img {
   width: 100%;
