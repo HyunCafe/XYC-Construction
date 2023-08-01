@@ -302,10 +302,10 @@
 
 /* Logo */
 .logo-icon {
-    width: 74px;
-    height: 74px;
-  }
-  
+  width: 74px;
+  height: 74px;
+}
+
 /* Carousel Cover */
 .carousel-inner .carousel-item img {
   width: 100%;
@@ -355,6 +355,45 @@
   #unique-testimonial-carousel .carousel-control-next {
     bottom: -80%;
   }
+}
+
+/* Our Process Cover */
+#process {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin: 50px 0;
+  padding: 30px;
+}
+
+#process .process-item {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+#process .process-item:last-child {
+  border-bottom: none;
+}
+
+#process h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#process p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container-fluid {
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
 }
 
 /* Appointments */
