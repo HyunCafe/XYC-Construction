@@ -56,3 +56,37 @@ $(document).ready(function () {
       .trigger("refresh.owl.carousel");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current pathname
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+
+  // Remove 'active' class from all links
+  var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  navLinks.forEach((link) => link.classList.remove("active"));
+
+  // Add 'active' class to the link that corresponds to the current page
+  switch (page) {
+    case "index.html":
+      if (window.location.hash === "#about-us") {
+        document.querySelector(".nav-about-us").classList.add("active");
+      } else if (window.location.hash === "#testimonials") {
+        document.querySelector(".nav-testimonials").classList.add("active");
+      } else if (window.location.hash === "#appointment") {
+        document.querySelector(".nav-appointment").classList.add("active");
+      } else {
+        document.querySelector(".nav-home").classList.add("active");
+      }
+      break;
+    case "process.html":
+      document.querySelector(".nav-process").classList.add("active");
+      break;
+    case "gallery.html":
+      document.querySelector(".nav-gallery").classList.add("active");
+      break;
+    case "faq.html":
+      document.querySelector(".nav-faq").classList.add("active");
+      break;
+  }
+});
