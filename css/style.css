@@ -313,10 +313,9 @@
   object-fit: cover;
 }
 
-/* Gallery */
+/* ------------------------ Gallery ------------------------ */
 .single-gallery-carousel-content-box {
   height: 100%;
-  /* or any fixed height */
 }
 
 .single-gallery-carousel-content-box img {
@@ -324,6 +323,7 @@
   height: auto;
   object-fit: cover;
 }
+/* ------------------------ Testimonials ------------------------ */
 
 /* Testimonials container */
 #unique-testimonial-carousel .carousel-inner {
@@ -362,7 +362,7 @@
   }
 }
 
-/* Our Process Cover */
+/* ------------------------ Our Process ------------------------ */
 #process {
   background-color: #fff;
   border-radius: 15px;
@@ -397,12 +397,12 @@
     margin: auto;
 }
 
-/* Appointments */
+/* ------------------------ Appointments ------------------------ */
 .bg-form {
   background-color: rgba(29, 76, 83, 0.8) !important;
 }
 
-/* Footer  */
+/* ------------------------ Footer ------------------------ */
 .container-fluid.footer p {
   color: #ffffff;
 }
