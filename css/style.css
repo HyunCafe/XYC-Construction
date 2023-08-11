@@ -313,6 +313,16 @@
   object-fit: cover;
 }
 
+.carousel-inner .carousel-item {
+  transition: opacity 0s;
+  opacity: 0;
+}
+
+.carousel-inner .carousel-item.active {
+  opacity: 1;
+}
+
+
 /* ------------------------ Navigation Links ------------------------ */
 
 @media (max-width: 991px) {
