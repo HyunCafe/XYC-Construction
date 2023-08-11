@@ -49,7 +49,7 @@ $(document).ready(function () {
     // Change 12 to the number of images you have
     owl
       .trigger("add.owl.carousel", [
-        '<div class="single-gallery-carousel-content-box"><img src="img/gallery/project-' +
+        '<div class="single-gallery-carousel-content-box"><img src="img/gallery/indexGallery/project-' +
           ("000" + i).slice(-3) +
           '.webp" alt="Image description" /></div>',
       ])
