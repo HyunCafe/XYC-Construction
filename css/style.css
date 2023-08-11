@@ -300,7 +300,6 @@
   border-color: #173c42;
 }
 
-
 /* Logo */
 .logo-icon {
   width: 74px;
@@ -337,19 +336,19 @@
   padding: 30px;
 }
 
-.commercial-column, .residential-column {
+.commercial-column,
+.residential-column {
   padding: 15px;
   background-color: #fff;
-  border-right: 2px solid var(--primary); 
-
+  border-right: 2px solid var(--primary);
 }
 
 .commercial-column h2,
 .residential-column h2 {
-  color: var(--primary); 
+  color: var(--primary);
   margin-bottom: 30px;
-  font-weight: 600; 
-  text-transform: uppercase; 
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .project-row h4 {
@@ -361,45 +360,50 @@
 
 .project-row p {
   font-size: 16px;
-  color: #666; 
+  color: #666;
 }
 
 .project-row img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px; /* Rounded corners for images */
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  border-radius: 5px;
+  /* Rounded corners for images */
+  transition: transform 0.3s ease;
+  /* Smooth scaling effect */
 }
 
 .project-row img:hover {
-  transform: scale(1.05); /* Slightly enlarge image on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge image on hover */
 }
-
 
 /* ------------------------ Testimonials ------------------------ */
 
 /* Testimonials container */
 #unique-testimonial-carousel .carousel-inner {
-  height: 400px; /* Fixed height */
+  height: 400px;
+  /* Fixed height */
 }
 
 /* Testimonials content */
 #unique-testimonial-carousel .carousel-item {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* Carousel navigation arrows */
 #unique-testimonial-carousel .carousel-control-prev,
 #unique-testimonial-carousel .carousel-control-next {
   position: absolute;
-  bottom: -90px; 
+  bottom: -90px;
 }
 
 /* Mobile devices (default) */
 @media (max-width: 991px) {
   #unique-testimonial-carousel .carousel-inner {
-    height: 500px; /* Fixed height */
+    height: 500px;
+    /* Fixed height */
   }
+
   #unique-testimonial-carousel .carousel-control-prev,
   #unique-testimonial-carousel .carousel-control-next {
     bottom: -10%;
@@ -411,7 +415,7 @@
 @media (min-width: 992px) {
   #unique-testimonial-carousel .carousel-control-prev,
   #unique-testimonial-carousel .carousel-control-next {
-    bottom: -90%; 
+    bottom: -90%;
   }
 }
 
@@ -445,9 +449,22 @@
   line-height: 1.6;
 }
 
-.process-container { 
-    max-width: 960px;
-    margin: auto;
+.process-item p {
+  color: #8d9297;
+}
+
+.process-container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.process-item img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
 
 /* ------------------------ Appointments ------------------------ */
@@ -468,13 +485,13 @@ body
 }
 
 @media (max-width: 992px) {
-    .footer .col-md-6 {
-      text-align: center;
-    }
-    .footer .col-lg-3.col-md-6:nth-child(3) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .footer .col-md-6 {
+    text-align: center;
   }
-  
+
+  .footer .col-lg-3.col-md-6:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
