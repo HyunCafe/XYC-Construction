@@ -313,6 +313,21 @@
   object-fit: cover;
 }
 
+/* ------------------------ Navigation Links ------------------------ */
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-item {
+    display: block;
+    float: none;
+  }
+}
+
+
 /* ------------------------ Gallery Index.html ------------------------ */
 .single-gallery-carousel-content-box {
   height: 100%;
