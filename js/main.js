@@ -30,7 +30,7 @@ $(document).ready(function () {
     loop: true,
     margin: 10,
     autoplay: true,
-    autoplayTimeout: 2000, //3 seconds
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -46,7 +46,6 @@ $(document).ready(function () {
   });
 
   for (var i = 1; i <= 11; i++) {
-    // Change 12 to the number of images you have
     owl
       .trigger("add.owl.carousel", [
         '<div class="single-gallery-carousel-content-box"><img src="img/gallery/indexGallery/project-' +
@@ -55,18 +54,18 @@ $(document).ready(function () {
       ])
       .trigger("refresh.owl.carousel");
   }
+
+  $('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the current pathname
   var path = window.location.pathname;
   var page = path.split("/").pop();
-
-  // Remove 'active' class from all links
   var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
   navLinks.forEach((link) => link.classList.remove("active"));
 
-  // Add 'active' class to the link that corresponds to the current page
   switch (page) {
     case "index.html":
       if (window.location.hash === "#about-us") {
