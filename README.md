@@ -7,6 +7,13 @@ Bootstrap was my framework of choice, not just for its ubiquity, but as a means 
 Beyond the website's confines, I streamlined the client's digital transition by migrating their original domain from Squareup to a more cost-effective setup with Netlify and Namecheap. This move not only optimized expenses but also ensured smoother operations. Augmenting their online presence, I was instrumental in establishing their BBB and Google Business profiles, rounding off a robust digital identity for the client.
 
 
+![Project Animation](/img/construction.gif)
+<p align="center">
+<a href="https://xycglobal.com" target="_blank">Live Link</a>
+</p>
+
+### Summary of Key Features:
+
 ## Project Timeline
 
 #### July 17, 2023
