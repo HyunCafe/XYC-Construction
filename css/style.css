@@ -404,29 +404,32 @@
 
 /* ------------------------ Testimonials ------------------------ */
 
-/* Testimonials container */
+
+
+
+/* 
+Custom Testimonials Section Unused
+Testimonials container
 #unique-testimonial-carousel .carousel-inner {
   height: 400px;
-  /* Fixed height */
 }
 
-/* Testimonials content */
+Testimonials content
 #unique-testimonial-carousel .carousel-item {
   overflow: hidden;
 }
 
-/* Carousel navigation arrows */
+Carousel navigation arrows
 #unique-testimonial-carousel .carousel-control-prev,
 #unique-testimonial-carousel .carousel-control-next {
   position: absolute;
   bottom: -90px;
 }
 
-/* Mobile devices (default) */
+Mobile devices (default)
 @media (max-width: 991px) {
   #unique-testimonial-carousel .carousel-inner {
     height: 500px;
-    /* Fixed height */
   }
 
   #unique-testimonial-carousel .carousel-control-prev,
@@ -436,13 +439,13 @@
   }
 }
 
-/* Desktop devices */
+Desktop devices
 @media (min-width: 992px) {
   #unique-testimonial-carousel .carousel-control-prev,
   #unique-testimonial-carousel .carousel-control-next {
     bottom: -90%;
   }
-}
+} */
 
 /* ------------------------ Our Process ------------------------ */
 #process {
