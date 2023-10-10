@@ -3,11 +3,11 @@
 
   // Spinner
   var spinner = function () {
-    setTimeout(function () {
-      if ($("#spinner").length > 0) {
-        $("#spinner").removeClass("show");
-      }
-    }, 1);
+      setTimeout(function () {
+          if ($("#spinner").length > 0) {
+              $("#spinner").removeClass("show");
+          }
+      }, 1);
   };
   spinner();
 
@@ -16,75 +16,99 @@
 
   // Sticky Navbar
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-      $(".sticky-top").addClass("shadow-sm").css("top", "0px");
-    } else {
-      $(".sticky-top").removeClass("shadow-sm").css("top", "-100px");
-    }
+      if ($(this).scrollTop() > 300) {
+          $(".sticky-top").addClass("shadow-sm").css("top", "0px");
+      } else {
+          $(".sticky-top").removeClass("shadow-sm").css("top", "-100px");
+      }
   });
-})(jQuery);
-
-$(document).ready(function () {
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
+// Carousel initialization
+var owl = $(".owl-carousel");
+owl.owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 4,
-      },
-    },
-  });
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 4 },
+    }
+});
 
-  for (var i = 1; i <= 19; i++) {
-    var imagePath = "img/gallery/indexGallery/project-" + ("000" + i).slice(-3);
-    
+// Add images to carousel
+for (var i = 1; i <= 19; i++) {
     owl.trigger("add.owl.carousel", [
-        '<div class="single-gallery-carousel-content-box"><img src="' +
-        imagePath + '.webp" onerror="this.onerror=null; this.src=\'' + imagePath + '.jpg\'; this.onerror=function(){this.src=\'' + imagePath + '.jpeg\'}" alt="Image description" /></div>',
+        '<div class="single-gallery-carousel-content-box"><img class="lightbox" src="img/gallery/indexGallery/project-' +
+        ("000" + i).slice(-3) +
+        '.webp" alt="Image description" /></div>'
     ]).trigger("refresh.owl.carousel");
 }
 
-  $('.navbar-nav>li>a').on('click', function () {
-    $('.navbar-collapse').collapse('hide');
-  });
+var autoplayTimeout;
+
+owl.on('dragged.owl.carousel', function(event) {
+    clearTimeout(autoplayTimeout); // Clear any previously set timeouts
+    owl.trigger('stop.owl.autoplay'); // Stop the autoplay
+    autoplayTimeout = setTimeout(function() {
+        owl.trigger('play.owl.autoplay'); // Start the autoplay after 3 seconds of inactivity
+    }, 3000);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+// Navbar collapse
+$('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
+
+// Lightbox for gallery
+var imageDialog = $('#imageDialog');
+var dialogImage = $('#dialogImage');
+var closeDialogButton = $('#closeDialog');
+
+// Delegate click event to images added dynamically
+$('.gallery-slider_wrapper').on('click', '.lightbox', function() {
+    dialogImage.attr('src', $(this).attr('src'));
+    imageDialog[0].showModal();
+});
+
+closeDialogButton.click(function() {
+    imageDialog[0].close();
+});
+
+imageDialog.click(function(event) {
+    if (event.target === imageDialog[0]) {
+        imageDialog[0].close();
+    }
+});
+
+  // Highlight active navbar link
   var path = window.location.pathname;
   var page = path.split("/").pop();
-  var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  navLinks.forEach((link) => link.classList.remove("active"));
+  var navLinks = $(".navbar-nav .nav-link");
+  navLinks.removeClass("active");
 
   switch (page) {
-    case "index.html":
-      if (window.location.hash === "#about-us") {
-        document.querySelector(".nav-about-us").classList.add("active");
-      } else if (window.location.hash === "#testimonials") {
-        document.querySelector(".nav-testimonials").classList.add("active");
-      } else if (window.location.hash === "#appointment") {
-        document.querySelector(".nav-appointment").classList.add("active");
-      } else {
-        document.querySelector(".nav-home").classList.add("active");
-      }
-      break;
-    case "process.html":
-      document.querySelector(".nav-process").classList.add("active");
-      break;
-    case "gallery.html":
-      document.querySelector(".nav-gallery").classList.add("active");
-      break;
-    case "faq.html":
-      document.querySelector(".nav-faq").classList.add("active");
-      break;
+      case "index.html":
+          if (window.location.hash === "#about-us") {
+              $(".nav-about-us").addClass("active");
+          } else if (window.location.hash === "#testimonials") {
+              $(".nav-testimonials").addClass("active");
+          } else if (window.location.hash === "#appointment") {
+              $(".nav-appointment").addClass("active");
+          } else {
+              $(".nav-home").addClass("active");
+          }
+          break;
+      case "process.html":
+          $(".nav-process").addClass("active");
+          break;
+      case "gallery.html":
+          $(".nav-gallery").addClass("active");
+          break;
+      case "faq.html":
+          $(".nav-faq").addClass("active");
+          break;
   }
-});
+
+})(jQuery);
