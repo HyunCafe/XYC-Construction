@@ -341,10 +341,16 @@ img.prevent-overflow {
     justify-content: center;
     width: 100%;
   }
+
   .nav-item {
     display: block;
     float: none;
   }
+
+  .navbar.sticky-top {
+    display: flex;
+    justify-content: space-around;
+}
 }
 
 /* ------------------------ Gallery Index.html ------------------------ */
@@ -439,48 +445,6 @@ img.prevent-overflow {
 
 /* ------------------------ Testimonials ------------------------ */
 
-
-
-
-/* 
-Custom Testimonials Section Unused
-Testimonials container
-#unique-testimonial-carousel .carousel-inner {
-  height: 400px;
-}
-
-Testimonials content
-#unique-testimonial-carousel .carousel-item {
-  overflow: hidden;
-}
-
-Carousel navigation arrows
-#unique-testimonial-carousel .carousel-control-prev,
-#unique-testimonial-carousel .carousel-control-next {
-  position: absolute;
-  bottom: -90px;
-}
-
-Mobile devices (default)
-@media (max-width: 991px) {
-  #unique-testimonial-carousel .carousel-inner {
-    height: 500px;
-  }
-
-  #unique-testimonial-carousel .carousel-control-prev,
-  #unique-testimonial-carousel .carousel-control-next {
-    bottom: -10%;
-    top: unset;
-  }
-}
-
-Desktop devices
-@media (min-width: 992px) {
-  #unique-testimonial-carousel .carousel-control-prev,
-  #unique-testimonial-carousel .carousel-control-next {
-    bottom: -90%;
-  }
-} */
 
 /* ------------------------ Our Process ------------------------ */
 #process {
