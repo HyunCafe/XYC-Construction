@@ -62,6 +62,27 @@
   $('.navbar-nav>li>a').on('click', function () {
       $('.navbar-collapse').collapse('hide');
   });
+  
+  $(document).ready(function() {
+    // When an image in the carousel is clicked
+    $('.owl-carousel img').on('click', function() {
+        var src = $(this).attr('src');
+        $('#enlargedImage').attr('src', src);      // Set the source for the enlarged image
+        $('#enlargedImageContainer').show();      // Show the enlarged image container
+    });
+
+    // Close the enlarged image
+    $('#closeEnlargedImage').on('click', function() {
+        $('#enlargedImageContainer').hide();
+    });
+
+    // Close the enlarged image if you click outside the image
+    $('#enlargedImageContainer').on('click', function(event) {
+        if (event.target === document.getElementById("enlargedImageContainer")) {
+            $('#enlargedImageContainer').hide();
+        }
+    });
+});
 
   // Highlight active navbar link
   var path = window.location.pathname;

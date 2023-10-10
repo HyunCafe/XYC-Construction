@@ -333,7 +333,6 @@ img.prevent-overflow {
   left: 0;                      /* If the image is absolutely positioned, this ensures it aligns to the left */
 }
 
-
 /* ------------------------ Navigation Links ------------------------ */
 
 @media (max-width: 991px) {
@@ -348,7 +347,6 @@ img.prevent-overflow {
   }
 }
 
-
 /* ------------------------ Gallery Index.html ------------------------ */
 .single-gallery-carousel-content-box {
   height: 100%;
@@ -359,6 +357,32 @@ img.prevent-overflow {
   height: auto;
   object-fit: cover;
 }
+
+#enlargedImageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#enlargedImage {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#closeEnlargedImage {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+}
+
 
 /* ------------------------ Gallery Gallery.html------------------------ */
 
