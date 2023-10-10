@@ -14,6 +14,12 @@
   z-index: 99;
 }
 
+body, html {
+  overflow-x: hidden; /* fix horizontal scroll on mobile */
+  max-width: 100vw;
+}
+
+
 /*** Spinner ***/
 #spinner {
   opacity: 0;
@@ -320,6 +326,11 @@
 
 .carousel-inner .carousel-item.active {
   opacity: 1;
+}
+
+img.prevent-overflow {
+  max-width: 100vw !important; /* This ensures the width never exceeds the viewport */
+  left: 0;                      /* If the image is absolutely positioned, this ensures it aligns to the left */
 }
 
 
