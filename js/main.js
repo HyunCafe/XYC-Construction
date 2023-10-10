@@ -63,26 +63,6 @@
       $('.navbar-collapse').collapse('hide');
   });
 
-  // Lightbox for gallery
-  var imageDialog = $('#imageDialog');
-  var dialogImage = $('#dialogImage');
-  var closeDialogButton = $('#closeDialog');
-
-  $('.gallery-slider_wrapper').on('click', '.lightbox', function() {
-      dialogImage.attr('src', $(this).attr('src'));
-      imageDialog[0].showModal();
-  });
-
-  closeDialogButton.click(function() {
-      imageDialog[0].close();
-  });
-
-  imageDialog.click(function(event) {
-      if (event.target === imageDialog[0]) {
-          imageDialog[0].close();
-      }
-  });
-
   // Highlight active navbar link
   var path = window.location.pathname;
   var page = path.split("/").pop();
