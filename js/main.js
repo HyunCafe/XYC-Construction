@@ -45,15 +45,14 @@ $(document).ready(function () {
     },
   });
 
-  for (var i = 1; i <= 11; i++) {
-    owl
-      .trigger("add.owl.carousel", [
-        '<div class="single-gallery-carousel-content-box"><img src="img/gallery/indexGallery/project-' +
-          ("000" + i).slice(-3) +
-          '.webp" alt="Image description" /></div>',
-      ])
-      .trigger("refresh.owl.carousel");
-  }
+  for (var i = 1; i <= 19; i++) {
+    var imagePath = "img/gallery/indexGallery/project-" + ("000" + i).slice(-3);
+    
+    owl.trigger("add.owl.carousel", [
+        '<div class="single-gallery-carousel-content-box"><img src="' +
+        imagePath + '.webp" onerror="this.onerror=null; this.src=\'' + imagePath + '.jpg\'; this.onerror=function(){this.src=\'' + imagePath + '.jpeg\'}" alt="Image description" /></div>',
+    ]).trigger("refresh.owl.carousel");
+}
 
   $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
